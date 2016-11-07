@@ -8,7 +8,6 @@ package Visao;
 
 import Dados.Vusuario;
 import Controle.Fusuario;
-import Controle.Fproduto;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 

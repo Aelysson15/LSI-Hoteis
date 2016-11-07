@@ -1,5 +1,6 @@
 package Controle;
 
+
 import Dados.Vpessoa;
 import com.sun.org.apache.xerces.internal.impl.dtd.models.DFAContentModel;
 import com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory;
@@ -25,12 +26,14 @@ public class Fpessoa {
     public DefaultTableModel mostrar(String buscar) {
         DefaultTableModel modelo;
         
-        String[] titulos = {"ID", "Nome", "Telefone", "Endereco", "Documento"};
+        String[] titulos = {"ID", "Nome"};
 
-        String[] registro = new String[5];
+        String[] registro = new String[2];
 
         totalderegistros = 0;
         modelo = new DefaultTableModel(null, titulos);
+        
+        
         
         try {
             Statement st = con.createStatement();
@@ -39,9 +42,7 @@ public class Fpessoa {
             while (rs.next()) {
                 registro[1]=rs.getString("id");
                 registro[2]=rs.getString("nome");
-                registro[3]=rs.getString("endereco");
-                registro[4]=rs.getString("telefone");
-                registro[5]=rs.getString("documento");
+                
                 totalderegistros = totalderegistros+1;
                 
                 modelo.addRow(registro);
@@ -55,21 +56,18 @@ public class Fpessoa {
     }
     
     public boolean inserir(Vpessoa dts) {
-        sSQL = "insert into pessoa (nome, endereco, telefone, documento)"
-                + "values (?,?,?,?)";
+        sSQL = "insert into pessoa (nome)"
+                + "values (?)";
         sSQL2 = "insert into pessoa (id)"
                 + "values ((select id from pessoa order by id desc limit 1),?)";
         try {
 
             PreparedStatement pst = con.prepareStatement(sSQL);
             PreparedStatement pst2 = con.prepareStatement(sSQL2);
+
+            pst.setString(1, dts.getNome());
             
-            pst2.setInt(1, dts.getId());
-            
-            pst.setString(2, dts.getNome());
-            pst.setString(3, dts.getEndereco());
-            pst.setString(4, dts.getTelefone());
-            pst.setString(5, dts.getDocumento());
+            pst2.setInt(1, dts.getIdpessoa());
 
             int n = pst.executeUpdate();
 
@@ -94,16 +92,12 @@ public class Fpessoa {
     }
     
     public boolean editar(Vpessoa dts){
-        sSQL = "update pessoa set nome=?, endereco=?, telefone=?, documento=? "
+        sSQL = "update pessoa set nome=?, "
                 + "where id=?";
         try {
             PreparedStatement pst = con.prepareStatement(sSQL);
-            pst.setInt(1, dts.getId());
-            
+            pst.setInt(1, dts.getIdpessoa());
             pst.setString(2, dts.getNome());
-            pst.setString(3, dts.getEndereco());
-            pst.setString(4, dts.getTelefone());
-            pst.setString(5, dts.getDocumento());
                         
             int n = pst.executeUpdate();
             if (n != 0) {
@@ -128,7 +122,7 @@ public class Fpessoa {
             PreparedStatement pst2 = con.prepareStatement(sSQL2);
 
             
-            pst.setInt(1, dts.getId());
+            pst.setInt(1, dts.getIdpessoa());
             pst2.setString(1, dts.getNome());
 
             int n = pst.executeUpdate();
