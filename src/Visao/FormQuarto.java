@@ -18,7 +18,7 @@ public class FormQuarto extends javax.swing.JFrame {
         initComponents();
     }
     
-    private String action="guardar";
+    private String action="salvar";
     void ocultar_colunas(){
         tblistado.getColumnModel().getColumn(0).setMaxWidth(0);
         tblistado.getColumnModel().getColumn(0).setMinWidth(0);
