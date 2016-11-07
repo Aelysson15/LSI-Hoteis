@@ -1,5 +1,6 @@
 package Controle;
 
+import Dados.Vusuario;
 import Dados.Vpessoa;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
