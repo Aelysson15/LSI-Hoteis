@@ -8,32 +8,25 @@ package Dados;
 
 /**
  *
- * @author CARLOS
+ * @author cragl
  */
 public class Vpessoa {
     private int idpessoa;
     private String nome;
-    private String sobrenome;
-    private String ultimonome;
-    private String tipo_documento;
-    private String num_documento;
-    private String direcao;
+    private String documento;
+    private String endereco;
     private String telefone;
     private String email;
 
     public Vpessoa() {
     }
 
-    public Vpessoa(int idpessoa, String nome, String sobrenome, 
-            String ultimonome, String tipo_documento, String num_documento, 
-            String direcao, String telefone, String email) {
+    public Vpessoa(int idpessoa, String nome, String documento,
+            String endereco, String telefone, String email) {
         this.idpessoa = idpessoa;
         this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.ultimonome = ultimonome;
-        this.tipo_documento = tipo_documento;
-        this.num_documento = num_documento;
-        this.direcao = direcao;
+        this.documento = documento;
+        this.endereco = endereco;
         this.telefone = telefone;
         this.email = email;
     }
@@ -54,44 +47,20 @@ public class Vpessoa {
         this.nome = nome;
     }
 
-    public String getSobrenome() {
-        return sobrenome;
+    public String getDocumento() {
+        return documento;
     }
 
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
+    public void setDocumento(String documento) {
+        this.documento = documento;
     }
 
-    public String getUltimonome() {
-        return ultimonome;
-    }
-
-    public void setUltimonome(String ultimonome) {
-        this.ultimonome = ultimonome;
-    }
-
-    public String getTipo_documento() {
-        return tipo_documento;
-    }
-
-    public void setTipo_documento(String tipo_documento) {
-        this.tipo_documento = tipo_documento;
-    }
-
-    public String getNum_documento() {
-        return num_documento;
-    }
-
-    public void setNum_documento(String num_documento) {
-        this.num_documento = num_documento;
-    }
-
-    public String getDirecao() {
-        return direcao;
+    public String getEndereco() {
+        return endereco;
     }
 
     public void setDirecao(String direcao) {
-        this.direcao = direcao;
+        this.endereco = endereco;
     }
 
     public String getTelefone() {
@@ -109,9 +78,5 @@ public class Vpessoa {
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    
-    
-    
     
 }
