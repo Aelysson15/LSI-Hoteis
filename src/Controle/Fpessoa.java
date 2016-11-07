@@ -67,7 +67,7 @@ public class Fpessoa {
 
             pst.setString(1, dts.getNome());
             
-            pst2.setInt(1, dts.getId());
+            pst2.setInt(1, dts.getIdpessoa());
 
             int n = pst.executeUpdate();
 
@@ -96,7 +96,7 @@ public class Fpessoa {
                 + "where id=?";
         try {
             PreparedStatement pst = con.prepareStatement(sSQL);
-            pst.setInt(1, dts.getId());
+            pst.setInt(1, dts.getIdpessoa());
             pst.setString(2, dts.getNome());
                         
             int n = pst.executeUpdate();
@@ -122,7 +122,7 @@ public class Fpessoa {
             PreparedStatement pst2 = con.prepareStatement(sSQL2);
 
             
-            pst.setInt(1, dts.getId());
+            pst.setInt(1, dts.getIdpessoa());
             pst2.setString(1, dts.getNome());
 
             int n = pst.executeUpdate();
