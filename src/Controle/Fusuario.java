@@ -36,10 +36,10 @@ public class Fusuario {
         totalregistros = 0;
         modelo = new DefaultTableModel(null, titulos);
 
-        sSQL = "select p.idpersona,p.nombre,p.apaterno,p.amaterno,p.tipo_documento,p.num_documento,"
-                + "p.direccion,p.telefono,p.email,c.codigo_cliente from persona p inner join cliente c "
-                + "on p.idpersona=c.idpersona where num_documento like '%"
-                + buscar + "%' order by idpersona desc";
+        sSQL = "select p.idpessoa,p.nome,p.sobrenome,p.ultimonome,p.tipo_documento,p.num_documento,"
+                + "p.direcao,p.telefone,p.email,c.codigo_cliente from pessoa p inner join usuario c "
+                + "on p.idpessoa=c.idpessoa where num_documento like '%"
+                + buscar + "%' order by idpessoa desc";
 
         try {
             Statement st = cn.createStatement();
