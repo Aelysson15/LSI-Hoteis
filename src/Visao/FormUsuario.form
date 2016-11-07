@@ -66,7 +66,7 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="txtidpersona" min="-2" pref="124" max="-2" attributes="0"/>
+                          <Component id="txtidpessoa" min="-2" pref="124" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -75,13 +75,13 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
-                                  <Component id="txtnombre" max="32767" attributes="0"/>
+                                  <Component id="txtnome" max="32767" attributes="0"/>
                               </Group>
                               <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                                      <Component id="txtapaterno" max="32767" attributes="0"/>
+                                      <Component id="txtsobrenome" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="btnnuevo" min="-2" max="-2" attributes="0"/>
@@ -100,7 +100,7 @@
                                   <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="cbotipo_documento" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
-                                      <Component id="txtamaterno" alignment="0" min="-2" pref="263" max="-2" attributes="0"/>
+                                      <Component id="txtultimonome" alignment="0" min="-2" pref="263" max="-2" attributes="0"/>
                                       <Component id="txtnum_documento" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -109,13 +109,13 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                                          <Component id="txtdireccion" min="-2" pref="184" max="-2" attributes="0"/>
+                                          <Component id="txtdirecao" min="-2" pref="184" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                                              <Component id="txttelefono" min="-2" pref="184" max="-2" attributes="0"/>
+                                              <Component id="txttelefone" min="-2" pref="184" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -142,20 +142,20 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="txtidpersona" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtidpessoa" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jLabel2" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtnombre" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtnome" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtapaterno" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtsobrenome" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtamaterno" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtultimonome" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -171,12 +171,12 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtdireccion" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtdirecao" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txttelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txttelefone" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -200,16 +200,16 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JTextField" name="txtidpersona">
+        <Component class="javax.swing.JTextField" name="txtidpessoa">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtnombre">
+        <Component class="javax.swing.JTextField" name="txtnome">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtnombreActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtnomeActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
@@ -289,14 +289,14 @@
             <Property name="text" type="java.lang.String" value="Apaterno:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtapaterno">
+        <Component class="javax.swing.JTextField" name="txtsobrenome">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtapaternoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtsobrenomeActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtamaterno">
+        <Component class="javax.swing.JTextField" name="txtultimonome">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtamaternoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtultimonomeActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
@@ -306,22 +306,22 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Direcci&#xf3;n:"/>
+            <Property name="text" type="java.lang.String" value="Dire&#xe7;&#xe3;o:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtdireccion">
+        <Component class="javax.swing.JTextField" name="txtdirecao">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtdireccionActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtdirecaoActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Tel&#xe9;fono:"/>
+            <Property name="text" type="java.lang.String" value="Telefone:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txttelefono">
+        <Component class="javax.swing.JTextField" name="txttelefone">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txttelefonoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txttelefoneActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtemail">

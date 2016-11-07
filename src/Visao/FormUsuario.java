@@ -27,9 +27,9 @@ public class FormUsuario extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        txtidpersona = new javax.swing.JTextField();
+        txtidpessoa = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        txtnombre = new javax.swing.JTextField();
+        txtnome = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         txtnum_documento = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
@@ -38,13 +38,13 @@ public class FormUsuario extends javax.swing.JFrame {
         btnguardar = new javax.swing.JButton();
         btncancelar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        txtapaterno = new javax.swing.JTextField();
-        txtamaterno = new javax.swing.JTextField();
+        txtsobrenome = new javax.swing.JTextField();
+        txtultimonome = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        txtdireccion = new javax.swing.JTextField();
+        txtdirecao = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        txttelefono = new javax.swing.JTextField();
+        txttelefone = new javax.swing.JTextField();
         txtemail = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         txtcodigo_cliente = new javax.swing.JTextField();
@@ -57,9 +57,9 @@ public class FormUsuario extends javax.swing.JFrame {
 
         jLabel2.setText("Nome");
 
-        txtnombre.addActionListener(new java.awt.event.ActionListener() {
+        txtnome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtnombreActionPerformed(evt);
+                txtnomeActionPerformed(evt);
             }
         });
 
@@ -109,33 +109,33 @@ public class FormUsuario extends javax.swing.JFrame {
 
         jLabel3.setText("Apaterno:");
 
-        txtapaterno.addActionListener(new java.awt.event.ActionListener() {
+        txtsobrenome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtapaternoActionPerformed(evt);
+                txtsobrenomeActionPerformed(evt);
             }
         });
 
-        txtamaterno.addActionListener(new java.awt.event.ActionListener() {
+        txtultimonome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtamaternoActionPerformed(evt);
+                txtultimonomeActionPerformed(evt);
             }
         });
 
         jLabel4.setText("AMaterno:");
 
-        jLabel8.setText("Dirección:");
+        jLabel8.setText("Direção:");
 
-        txtdireccion.addActionListener(new java.awt.event.ActionListener() {
+        txtdirecao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtdireccionActionPerformed(evt);
+                txtdirecaoActionPerformed(evt);
             }
         });
 
-        jLabel10.setText("Teléfono:");
+        jLabel10.setText("Telefone:");
 
-        txttelefono.addActionListener(new java.awt.event.ActionListener() {
+        txttelefone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txttelefonoActionPerformed(evt);
+                txttelefoneActionPerformed(evt);
             }
         });
 
@@ -163,7 +163,7 @@ public class FormUsuario extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtidpersona, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtidpessoa, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(82, 82, 82))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
@@ -171,12 +171,12 @@ public class FormUsuario extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(82, 82, 82)
-                                .addComponent(txtnombre))
+                                .addComponent(txtnome))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(jLabel3)
                                     .addGap(74, 74, 74)
-                                    .addComponent(txtapaterno))
+                                    .addComponent(txtsobrenome))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(btnnuevo)
                                     .addGap(42, 42, 42)
@@ -191,19 +191,19 @@ public class FormUsuario extends javax.swing.JFrame {
                                 .addGap(72, 72, 72)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(cbotipo_documento, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtamaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtultimonome, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtnum_documento, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel8)
                                         .addGap(72, 72, 72)
-                                        .addComponent(txtdireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtdirecao, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                             .addComponent(jLabel10)
                                             .addGap(72, 72, 72)
-                                            .addComponent(txttelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(txttelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(jLabel12)
@@ -218,18 +218,18 @@ public class FormUsuario extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(txtidpersona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtidpessoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
-                    .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtnome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtapaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtsobrenome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtamaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtultimonome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -242,11 +242,11 @@ public class FormUsuario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(txtdireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtdirecao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(txttelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txttelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
@@ -297,25 +297,25 @@ public class FormUsuario extends javax.swing.JFrame {
         txtemail.transferFocus();
     }//GEN-LAST:event_txtemailActionPerformed
 
-    private void txttelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttelefonoActionPerformed
+    private void txttelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttelefoneActionPerformed
         // TODO add your handling code here:
-        txttelefono.transferFocus();
-    }//GEN-LAST:event_txttelefonoActionPerformed
+        txttelefone.transferFocus();
+    }//GEN-LAST:event_txttelefoneActionPerformed
 
-    private void txtdireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdireccionActionPerformed
+    private void txtdirecaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdirecaoActionPerformed
         // TODO add your handling code here:
-        txtdireccion.transferFocus();
-    }//GEN-LAST:event_txtdireccionActionPerformed
+        txtdirecao.transferFocus();
+    }//GEN-LAST:event_txtdirecaoActionPerformed
 
-    private void txtamaternoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtamaternoActionPerformed
+    private void txtultimonomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtultimonomeActionPerformed
         // TODO add your handling code here:
-        txtamaterno.transferFocus();
-    }//GEN-LAST:event_txtamaternoActionPerformed
+        txtultimonome.transferFocus();
+    }//GEN-LAST:event_txtultimonomeActionPerformed
 
-    private void txtapaternoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtapaternoActionPerformed
+    private void txtsobrenomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsobrenomeActionPerformed
         // TODO add your handling code here:
-        txtapaterno.transferFocus();
-    }//GEN-LAST:event_txtapaternoActionPerformed
+        txtsobrenome.transferFocus();
+    }//GEN-LAST:event_txtsobrenomeActionPerformed
 
     private void btncancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncancelarActionPerformed
         // TODO add your handling code here:
@@ -324,9 +324,9 @@ public class FormUsuario extends javax.swing.JFrame {
 
     private void btnguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarActionPerformed
         // TODO add your handling code here:
-        if (txtnombre.getText().length() == 0) {
+        if (txtnome.getText().length() == 0) {
             JOptionPane.showConfirmDialog(rootPane, "Adicionar nome para usuario");
-            txtnombre.requestFocus();
+            txtnome.requestFocus();
             return;
         }
 
@@ -345,32 +345,32 @@ public class FormUsuario extends javax.swing.JFrame {
         Vusuario dts = new Vusuario();
         Fusuario func = new Fusuario();
 
-        dts.setNome(txtnombre.getText());
+        dts.setNome(txtnome.getText());
 
         int seleccionado = cbotipo_documento.getSelectedIndex();
         dts.setTipo_documento((String) cbotipo_documento.getItemAt(seleccionado));
         dts.setNum_documento(txtnum_documento.getText());
-        dts.setDireccion(txtdireccion.getText());
-        dts.setTelefono(txttelefono.getText());
+        dts.setDireccion(txtdirecao.getText());
+        dts.setTelefone(txttelefone.getText());
         dts.setEmail(txtemail.getText());
         dts.setCodigo_cliente(txtcodigo_cliente.getText());
 
-        if (accion.equals("guardar")) {
-            if (func.insertar(dts)) {
-                JOptionPane.showMessageDialog(rootPane, "el cliente fue registrado satisfactoriamente");
+        if (action.equals("guardar")) {
+            if (func.inserir(dts)) {
+                JOptionPane.showMessageDialog(rootPane, "o cliente foi registrado com sucesso");
                 mostrar("");
-                inhabilitar();
+                inabilitar();
 
             }
 
         }
-        else if (accion.equals("editar")){
-            dts.setIdpersona(Integer.parseInt(txtidpersona.getText()));
+        else if (action.equals("editar")){
+            dts.setIdpessoa(Integer.parseInt(txtidpessoa.getText()));
 
             if (func.editar(dts)) {
-                JOptionPane.showMessageDialog(rootPane, "El Cliente fue Editado satisfactoriamente");
+                JOptionPane.showMessageDialog(rootPane, "O Cliente foi Editado com sucesso");
                 mostrar("");
-                inhabilitar();
+                inabilitar();
             }
         }
     }//GEN-LAST:event_btnguardarActionPerformed
@@ -378,8 +378,8 @@ public class FormUsuario extends javax.swing.JFrame {
     private void btnnuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnuevoActionPerformed
         // TODO add your handling code here:
         habilitar();
-        btnguardar.setText("Guardar");
-        accion = "guardar";
+        btnguardar.setText("Salvar");
+        action = "salvar";
     }//GEN-LAST:event_btnnuevoActionPerformed
 
     private void cbotipo_documentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbotipo_documentoActionPerformed
@@ -392,10 +392,10 @@ public class FormUsuario extends javax.swing.JFrame {
         txtnum_documento.transferFocus();
     }//GEN-LAST:event_txtnum_documentoActionPerformed
 
-    private void txtnombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombreActionPerformed
+    private void txtnomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnomeActionPerformed
         // TODO add your handling code here:
-        txtnombre.transferFocus();
-    }//GEN-LAST:event_txtnombreActionPerformed
+        txtnome.transferFocus();
+    }//GEN-LAST:event_txtnomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -447,14 +447,14 @@ public class FormUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txtamaterno;
-    private javax.swing.JTextField txtapaterno;
     private javax.swing.JTextField txtcodigo_cliente;
-    private javax.swing.JTextField txtdireccion;
+    private javax.swing.JTextField txtdirecao;
     private javax.swing.JTextField txtemail;
-    private javax.swing.JTextField txtidpersona;
-    private javax.swing.JTextField txtnombre;
+    private javax.swing.JTextField txtidpessoa;
+    private javax.swing.JTextField txtnome;
     private javax.swing.JTextField txtnum_documento;
-    private javax.swing.JTextField txttelefono;
+    private javax.swing.JTextField txtsobrenome;
+    private javax.swing.JTextField txttelefone;
+    private javax.swing.JTextField txtultimonome;
     // End of variables declaration//GEN-END:variables
 }

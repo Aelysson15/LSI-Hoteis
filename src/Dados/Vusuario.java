@@ -17,6 +17,12 @@ public class Vusuario {
     private String telefone;
     private String rg;
     
+    private String tipo_documento;
+    private String num_documento;
+
+    private String email;
+    private String codigo_cliente;
+    
     
     public Vusuario (int id, String nome, String endereco, String telefone, String rg){
         this.id = id;
@@ -24,6 +30,7 @@ public class Vusuario {
         this.endereco = endereco;
         this.telefone = telefone;
         this.rg = rg;
+        
     }
     
     public Vusuario(){
@@ -68,5 +75,29 @@ public class Vusuario {
     
     public void setRg(String rg){
         this.rg = rg;
+    }
+
+    
+    
+    public void setTipo_documento(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setNum_documento(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setDireccion(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
+
+    public void setEmail(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setCodigo_cliente(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
