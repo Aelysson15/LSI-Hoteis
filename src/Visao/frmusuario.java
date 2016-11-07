@@ -563,7 +563,7 @@ public class frmusuario extends javax.swing.JInternalFrame {
         dts.setDirecao(txtdirecao.getText());
         dts.setTelefono(txttelefone.getText());
         dts.setEmail(txtemail.getText());
-        dts.setCodigo_cliente(txtcodigo_cliente.getText());
+        dts.setCodigo_usuario(txtcodigo_cliente.getText());
         
         if (accion.equals("guardar")) {
             if (func.insertar(dts)) {

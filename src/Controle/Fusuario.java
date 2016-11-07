@@ -55,7 +55,7 @@ public class Fusuario {
                 registro[6] = rs.getString("direccion");
                 registro[7] = rs.getString("telefono");
                 registro[8] = rs.getString("email");
-                registro[9] = rs.getString("codigo_cliente");
+                registro[9] = rs.getString("codigo_usuario");
 
                 totalregistros = totalregistros + 1;
                 modelo.addRow(registro);
@@ -71,9 +71,9 @@ public class Fusuario {
     }
 
     public boolean insertar(Vusuario dts) {
-        sSQL = "insert into persona (nome,sobrenome,ultimonome,tipo_documento,num_documento,direcao,telefone,email)"
+        sSQL = "insert into pessoa (nome,sobrenome,ultimonome,tipo_documento,num_documento,direcao,telefone,email)"
                 + "values (?,?,?,?,?,?,?,?)";
-        sSQL2 = "insert into cliente (idpessoa,codigo_cliente)"
+        sSQL2 = "insert into usuario (idpessoa,codigo_usuario)"
                 + "values ((select idpessoa from pessoa order by idpessoa desc limit 1),?)";
         try {
 
@@ -89,7 +89,7 @@ public class Fusuario {
             pst.setString(7, dts.getTelefone());
             pst.setString(8, dts.getEmail());
 
-            pst2.setString(1, dts.getCodigo_cliente());
+            pst2.setString(1, dts.getCodigo_usuario());
 
             int n = pst.executeUpdate();
 
@@ -117,7 +117,7 @@ public class Fusuario {
         sSQL = "update pessoa set nome=?,sobrenome=?,ultimonome=?,tipo_documento=?,num_documento=?,"
                 + " direcao=?,telefone=?,email=? where idpessoa=?";
         
-        sSQL2 = "update usuario set codigo_cliente=?"
+        sSQL2 = "update usuario set codigo_usuario=?"
                 + " where idpessoa=?";
         try {
 
@@ -134,7 +134,7 @@ public class Fusuario {
             pst.setString(8, dts.getEmail());
             pst.setInt(9, dts.getIdpessoa());
 
-            pst2.setString(1, dts.getCodigo_cliente());
+            pst2.setString(1, dts.getCodigo_usuario());
             pst2.setInt(2, dts.getIdpessoa());
 
             int n = pst.executeUpdate();
@@ -160,8 +160,8 @@ public class Fusuario {
     }
 
     public boolean eliminar(Vusuario dts) {
-        sSQL = "delete from cliente where idpessoa=?";
-        sSQL2 = "delete from persona where idpessoa=?";
+        sSQL = "delete from pessoa where idpessoa=?";
+        sSQL2 = "delete from pessoa where idpessoa=?";
 
         try {
 
