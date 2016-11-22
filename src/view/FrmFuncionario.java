@@ -190,7 +190,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
 
         btnnovo.setBackground(new java.awt.Color(51, 51, 51));
         btnnovo.setForeground(new java.awt.Color(255, 255, 255));
-        btnnovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/nuevo.GIF"))); // NOI18N
+        btnnovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/novo.GIF"))); // NOI18N
         btnnovo.setText("Novo");
         btnnovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,7 +200,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
 
         btnsalvar.setBackground(new java.awt.Color(51, 51, 51));
         btnsalvar.setForeground(new java.awt.Color(255, 255, 255));
-        btnsalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/guardar.png"))); // NOI18N
+        btnsalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/salvar.png"))); // NOI18N
         btnsalvar.setText("Salvar");
         btnsalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -435,7 +435,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
 
         btnsair.setBackground(new java.awt.Color(51, 51, 51));
         btnsair.setForeground(new java.awt.Color(255, 255, 255));
-        btnsair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/salir.gif"))); // NOI18N
+        btnsair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/cancelar.png"))); // NOI18N
         btnsair.setText("Sair");
         btnsair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -445,7 +445,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
 
         lbltotalregistros.setText("Registros");
 
-        btnexcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/eliminar.png"))); // NOI18N
+        btnexcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/Deletar.png"))); // NOI18N
         btnexcluir.setText("Excluir");
         btnexcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -474,7 +474,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
                                 .addComponent(btnexcluir)
                                 .addGap(42, 42, 42)
                                 .addComponent(btnsair)))
-                        .addGap(0, 152, Short.MAX_VALUE)))
+                        .addGap(0, 112, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -502,7 +502,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())

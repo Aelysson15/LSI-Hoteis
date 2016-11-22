@@ -51,7 +51,7 @@ public class FrmUsuarioLogin extends javax.swing.JFrame {
 
         btnentrar.setBackground(new java.awt.Color(51, 0, 0));
         btnentrar.setForeground(new java.awt.Color(255, 255, 255));
-        btnentrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/guardar.png"))); // NOI18N
+        btnentrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/salvar.png"))); // NOI18N
         btnentrar.setText("Entrar");
         btnentrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,7 +61,7 @@ public class FrmUsuarioLogin extends javax.swing.JFrame {
 
         btnsair.setBackground(new java.awt.Color(51, 0, 0));
         btnsair.setForeground(new java.awt.Color(255, 255, 255));
-        btnsair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/salir.gif"))); // NOI18N
+        btnsair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/cancelar.png"))); // NOI18N
         btnsair.setText("Sair");
 
         tablalistado.setModel(new javax.swing.table.DefaultTableModel(
@@ -96,9 +96,8 @@ public class FrmUsuarioLogin extends javax.swing.JFrame {
                         .addComponent(btnsair, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtusuario, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
-                        .addComponent(txtsenha)))
+                    .addComponent(txtusuario)
+                    .addComponent(txtsenha))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())

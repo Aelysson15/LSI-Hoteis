@@ -180,7 +180,7 @@ public static String cliente;
 
         btnnovo.setBackground(new java.awt.Color(51, 51, 51));
         btnnovo.setForeground(new java.awt.Color(255, 255, 255));
-        btnnovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/nuevo.GIF"))); // NOI18N
+        btnnovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/novo.GIF"))); // NOI18N
         btnnovo.setText("Novo");
         btnnovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,7 +190,7 @@ public static String cliente;
 
         btnsalvar.setBackground(new java.awt.Color(51, 51, 51));
         btnsalvar.setForeground(new java.awt.Color(255, 255, 255));
-        btnsalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/guardar.png"))); // NOI18N
+        btnsalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/salvar.png"))); // NOI18N
         btnsalvar.setText("Salvar");
         btnsalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -343,7 +343,7 @@ public static String cliente;
 
         btnexcluir.setBackground(new java.awt.Color(51, 51, 51));
         btnexcluir.setForeground(new java.awt.Color(255, 255, 255));
-        btnexcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/eliminar.png"))); // NOI18N
+        btnexcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/Deletar.png"))); // NOI18N
         btnexcluir.setText("Excluir");
         btnexcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -353,7 +353,7 @@ public static String cliente;
 
         btnsair.setBackground(new java.awt.Color(51, 51, 51));
         btnsair.setForeground(new java.awt.Color(255, 255, 255));
-        btnsair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/salir.gif"))); // NOI18N
+        btnsair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/cancelar.png"))); // NOI18N
         btnsair.setText("Sair");
         btnsair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
