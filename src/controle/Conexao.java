@@ -5,32 +5,28 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-
 /**
  *
  * @author aelysson
  */
 public class Conexao {
-    public String db="bdreserva";
-    public String url="jdbc:mysql://127.0.0.1/" +db;
-    public String user="root";
-    public String pass="";
+    public String db="basereserva";
+    public String url = "jdbc:postgresql://localhost:5432/basereserva";
+    public String user="postgres";
+    public String pass="123";
 
     public Conexao() {
     }
     
     public Connection conectar(){
-        Connection link=null;
-        
+        Connection link=null;     
         try {
-            Class.forName("org.gjt.mm.mysql.Driver");
+            Class.forName("org.postgresql.Driver");
             link=DriverManager.getConnection(this.url, this.user, this.pass);
             
         } catch (ClassNotFoundException | SQLException e) {
-            JOptionPane.showConfirmDialog(null, e);
-            
+            JOptionPane.showConfirmDialog(null, e);      
         }
-        
         return link;
     }
     
