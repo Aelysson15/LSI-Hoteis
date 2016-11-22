@@ -22,9 +22,9 @@ INSERT INTO cliente (idpessoa, codigo_cliente) VALUES
 (2, '1');
 
 CREATE TABLE IF NOT EXISTS despesa (
-  iddespesa int(11) NOT NULL AUTO_INCREMENT,
-  idreserva int(11) NOT NULL,
-  idservico int(11) NOT NULL,
+  iddespesa int NOT NULL AUTO_INCREMENT,
+  idreserva int NOT NULL,
+  idservico int NOT NULL,
   quantidade decimal(7,2) NOT NULL,
   preco_venda decimal(7,2) NOT NULL,
   estado varchar(15) NOT NULL,
@@ -38,7 +38,7 @@ INSERT INTO despesa (iddespesa, idreserva, idservico, quantidade, preco_venda, e
 (4, 2, 1, '2.00', '3.00', 'Aceito');
 
 CREATE TABLE IF NOT EXISTS quarto (
-  idquarto int(11) NOT NULL,
+  idquarto int NOT NULL,
   numero varchar(4) NOT NULL,
   andar varchar(2) NOT NULL,
   descricao varchar(255) DEFAULT NULL,
@@ -53,8 +53,8 @@ INSERT INTO quarto (idquarto, numero, andar, descricao, caracteristicas, preco_d
 (1, '101', '1', 'Quarto Casal', 'Duas camas, banho propio, bar.', '50.00', 'Disponivel', 'Individual');
 
 CREATE TABLE IF NOT EXISTS pagamento (
-  idpagamento int(11) NOT NULL,
-  idreserva int(11) NOT NULL,
+  idpagamento int NOT NULL,
+  idreserva int NOT NULL,
   tipo_comprovante varchar(20) NOT NULL,
   num_comprovante varchar(20) NOT NULL,
   total_pagamento decimal(7,2) NOT NULL,
@@ -83,7 +83,7 @@ INSERT INTO pessoa (idpessoa, nome, tipo_documento, num_documento, endereco, tel
 (1, 'Phulano', 'RG', '123456', 'CG', '8388334455', 'teste@teste.com');
 
 CREATE TABLE IF NOT EXISTS servico (
-  idservico int(11) NOT NULL,
+  idservico int NOT NULL,
   nome varchar(45) NOT NULL,
   descricao varchar(255) DEFAULT NULL,
   medida varchar(20) NOT NULL,
@@ -96,10 +96,10 @@ INSERT INTO servico (idservico, nome, descricao, medida, preco_venda) VALUES
 (2, 'Galeto assado', 'Galetos', 'UND', '1.00');
 
 CREATE TABLE IF NOT EXISTS reserva (
-  idreserva int(11) NOT NULL,
-  idquarto int(11) NOT NULL,
-  idcliente int(11) NOT NULL,
-  idfuncionario int(11) NOT NULL,
+  idreserva int NOT NULL,
+  idquarto int NOT NULL,
+  idcliente int NOT NULL,
+  idfuncionario int NOT NULL,
   tipo_reserva varchar(20) NOT NULL,
   data_reserva date NOT NULL,
   data_entrada date NOT NULL,
@@ -118,7 +118,7 @@ INSERT INTO reserva (idreserva, idquarto, idcliente, idfuncionario, tipo_reserva
 (2, 1, 2, 1, 'Reserva', '2016-07-16', '2016-07-16', '2016-07-16', '100.00', 'Paga');
 
 CREATE TABLE IF NOT EXISTS funcionario (
-  idpessoa int(11) NOT NULL,
+  idpessoa int NOT NULL,
   salario decimal(7,2) NOT NULL,
   acesso varchar(15) NOT NULL,
   login varchar(15) NOT NULL,
