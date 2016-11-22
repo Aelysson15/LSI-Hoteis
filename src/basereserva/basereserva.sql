@@ -8,15 +8,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
---
--- Base de datos: `basereserva`
---
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `cliente`
---
 
 CREATE TABLE IF NOT EXISTS `cliente` (
   `idpessoa` int(11) NOT NULL,
@@ -25,18 +17,10 @@ CREATE TABLE IF NOT EXISTS `cliente` (
   UNIQUE KEY `codigo_cliente_UNIQUE` (`codigo_cliente`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `cliente`
---
 
 INSERT INTO `cliente` (`idpessoa`, `codigo_cliente`) VALUES
 (2, '1');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `despesa`
---
 
 CREATE TABLE IF NOT EXISTS `despesa` (
   `iddespesa` int(11) NOT NULL AUTO_INCREMENT,
@@ -50,19 +34,12 @@ CREATE TABLE IF NOT EXISTS `despesa` (
   KEY `fk_consumo_reserva_idx` (`idreserva`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
---
--- Volcado de datos para la tabla `despesa`
---
 
 INSERT INTO `despesa` (`iddespesa`, `idreserva`, `idservico`, `quantidade`, `preco_venda`, `estado`) VALUES
 (3, 2, 2, '3.00', '1.00', 'Aceito'),
 (4, 2, 1, '2.00', '3.00', 'Aceito');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `quarto`
---
 
 CREATE TABLE IF NOT EXISTS `quarto` (
   `idquarto` int(11) NOT NULL AUTO_INCREMENT,
@@ -76,18 +53,11 @@ CREATE TABLE IF NOT EXISTS `quarto` (
   PRIMARY KEY (`idquarto`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
---
--- Volcado de datos para la tabla `quarto`
---
+
 
 INSERT INTO `quarto` (`idquarto`, `numero`, `andar`, `descricao`, `caracteristicas`, `preco_diario`, `estado`, `tipo_quarto`) VALUES
 (1, '101', '1', 'Quarto Casal', 'Duas camas, banho propio, bar.', '50.00', 'Disponivel', 'Individual');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `pagamento`
---
 
 CREATE TABLE IF NOT EXISTS `pagamento` (
   `idpagamento` int(11) NOT NULL AUTO_INCREMENT,
@@ -99,19 +69,11 @@ CREATE TABLE IF NOT EXISTS `pagamento` (
   KEY `fk_pago_reserva_idx` (`idreserva`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
---
--- Volcado de datos para la tabla `pagamento`
---
 
 INSERT INTO `pagamento` (`idpagamento`, `idreserva`, `tipo_comprovante`, `num_comprovante`, `total_pago`) VALUES
 (1, 1, 'Factura', '0001-00001', '100.00'),
 (2, 2, 'Factura', '0001-0002', '109.00');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `pessoa`
---
 
 CREATE TABLE IF NOT EXISTS `pessoa` (
   `idpessoa` int(11) NOT NULL AUTO_INCREMENT,
@@ -126,19 +88,13 @@ CREATE TABLE IF NOT EXISTS `pessoa` (
   UNIQUE KEY `telefone_UNIQUE` (`telefone`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
---
--- Volcado de datos para la tabla `pessoa`
---
+
 
 INSERT INTO `pessoa` (`idpessoa`, `nome`, `tipo_documento`, `num_documento`, `endereco`, `telefone`, `email`) VALUES
 (1, 'Juan Carlos', '47715777', NULL, NULL, NULL),
 (2, 'Ana', '48596879', 'CG - Catole 34', '98745698', '');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `servico`
---
 
 CREATE TABLE IF NOT EXISTS `servico` (
   `idservico` int(11) NOT NULL AUTO_INCREMENT,
@@ -149,19 +105,12 @@ CREATE TABLE IF NOT EXISTS `servico` (
   PRIMARY KEY (`idservico`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
---
--- Volcado de datos para la tabla `servico`
---
 
 INSERT INTO `servico` (`idservico`, `nome`, `descricao`, `medida`, `preco_venda`) VALUES
 (1, 'Agua Mineral', 'Agua de mesa.', 'UND', '3.00'),
 (2, 'Galeto assado', 'Galetos', 'UND', '1.00');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `reserva`
---
 
 CREATE TABLE IF NOT EXISTS `reserva` (
   `idreserva` int(11) NOT NULL AUTO_INCREMENT,
@@ -180,19 +129,12 @@ CREATE TABLE IF NOT EXISTS `reserva` (
   KEY `fk_reserva_trabajador_idx` (`idfuncionario`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
---
--- Volcado de datos para la tabla `reserva`
---
+
 
 INSERT INTO `reserva` (`idreserva`, `idquarto`, `idcliente`, `idfuncionario`, `tipo_reserva`, `data_reserva`, `data_entrada`, `data_saida`, `custo_alojamiento`, `estado`) VALUES
 (1, 1, 2, 1, 'Aluguel', '2016-02-16', '2016-02-16', '2016-02-16', '100.00', 'Paga'),
 (2, 1, 2, 1, 'Reserva', '2016-07-16', '2016-07-16', '2016-07-16', '100.00', 'Paga');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `funcionario`
---
 
 CREATE TABLE IF NOT EXISTS `funcionario` (
   `idpessoa` int(11) NOT NULL,
@@ -205,47 +147,30 @@ CREATE TABLE IF NOT EXISTS `funcionario` (
   UNIQUE KEY `login_UNIQUE` (`login`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Inserir de datos para la tabla `funcionario`
---
 
 INSERT INTO `funcionario` (`idpessoa`, `salario`, `acesso`, `login`, `senha`, `estado`) VALUES
 (1, '5000.00', 'Administrador', 'admin', 'admin', 'A');
 
---
--- Restrições para tabelas inseridas
---
 
---
--- Filtros para la tabla `cliente`
---
 ALTER TABLE `cliente`
   ADD CONSTRAINT `fk_pessoa_cliente` FOREIGN KEY (`idpessoa`) REFERENCES `pessoa` (`idpessoa`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
---
--- Filtros para la tabla `despesa`
---
+
 ALTER TABLE `despesa`
   ADD CONSTRAINT `fk_consumo_servico` FOREIGN KEY (`idservico`) REFERENCES `servico` (`idservico`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_consumo_reserva` FOREIGN KEY (`idreserva`) REFERENCES `reserva` (`idreserva`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
---
--- Filtros para la tabla `pagamento`
---
+
 ALTER TABLE `pagamento`
   ADD CONSTRAINT `fk_pago_reserva` FOREIGN KEY (`idreserva`) REFERENCES `reserva` (`idreserva`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
---
--- Filtros para la tabla `reserva`
---
+
 ALTER TABLE `reserva`
   ADD CONSTRAINT `fk_reserva_cliente` FOREIGN KEY (`idcliente`) REFERENCES `cliente` (`idpessoa`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_reserva_quarto` FOREIGN KEY (`idquarto`) REFERENCES `quarto` (`idquarto`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_reserva_funcionario` FOREIGN KEY (`idfuncionario`) REFERENCES `funcionario` (`idpessoa`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
---
--- Filtros para a tabela `funcionario`
---
+
 ALTER TABLE `funcionario`
   ADD CONSTRAINT `fk_pessoa_funcionario` FOREIGN KEY (`idpessoa`) REFERENCES `pessoa` (`idpessoa`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
