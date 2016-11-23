@@ -63,6 +63,4 @@ public class MFuncionario extends MPessoa{
         this.estado = estado;
     }
      
-     
-     
 }

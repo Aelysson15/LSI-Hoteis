@@ -34,7 +34,7 @@ public class Funcionario {
         modelo = new DefaultTableModel(null, titulos);
 
         sSQL = "select p.idpessoa,p.nome,p.tipo_documento,p.num_documento,"
-                + "p.endereco,p.telefone,p.email,t.salario,t.acesso,t.login,t.senha,t.estado from pessoa p inner join Funcionario t "
+                + "p.endereco,p.telefone,p.email,t.salario,t.acesso,t.login,t.senha,t.estado from pessoa p inner join funcionario t "
                 + "on p.idpessoa=t.idpessoa where num_documento like '%"
                 + buscar + "%' order by idpessoa desc";
 
@@ -69,9 +69,9 @@ public class Funcionario {
 
     }
 
-    public boolean insertar(MFuncionario dts) {
+    public boolean inserir(MFuncionario dts) {
         sSQL = "insert into pessoa (nome,tipo_documento,num_documento,endereco,telefone,email)"
-                + "values (?,?,?,?,?,?,?,?)";
+                + "values (?,?,?,?,?,?)";
         sSQL2 = "insert into funcionario (idpessoa,salario,acesso,login,senha,estado)"
                 + "values ((select idpessoa from pessoa order by idpessoa desc limit 1),?,?,?,?,?)";
         try {
@@ -81,11 +81,11 @@ public class Funcionario {
 
             pst.setString(1, dts.getNome());
 
-            pst.setString(4, dts.getTipo_documento());
-            pst.setString(5, dts.getNum_documento());
-            pst.setString(6, dts.getEndereco());
-            pst.setString(7, dts.getTelefone());
-            pst.setString(8, dts.getEmail());
+            pst.setString(2, dts.getTipo_documento());
+            pst.setString(3, dts.getNum_documento());
+            pst.setString(4, dts.getEndereco());
+            pst.setString(5, dts.getTelefone());
+            pst.setString(6, dts.getEmail());
 
             pst2.setDouble(1, dts.getSalario());
             pst2.setString(2, dts.getAcesso());
@@ -117,9 +117,9 @@ public class Funcionario {
 
     public boolean editar(MFuncionario dts) {
         sSQL = "update pessoa set nome=?,tipo_documento=?,num_documento=?,"
-                + " diendereco=?,telefone=?,email=? where idpessoa=?";
+                + " endereco=?,telefone=?,email=? where idpessoa=?";
         
-        sSQL2 = "update funcionario set saldo=?,acesso=?,login=?,senha=?,estado=?"
+        sSQL2 = "update funcionario set salario=?,acesso=?,login=?,senha=?,estado=?"
                 + " where idpessoa=?";
         try {
 
@@ -127,12 +127,12 @@ public class Funcionario {
             PreparedStatement pst2 = cn.prepareStatement(sSQL2);
 
             pst.setString(1, dts.getNome());
-            pst.setString(4, dts.getTipo_documento());
-            pst.setString(5, dts.getNum_documento());
-            pst.setString(6, dts.getEndereco());
-            pst.setString(7, dts.getTelefone());
-            pst.setString(8, dts.getEmail());
-            pst.setInt(9, dts.getIdpessoa());
+            pst.setString(2, dts.getTipo_documento());
+            pst.setString(3, dts.getNum_documento());
+            pst.setString(4, dts.getEndereco());
+            pst.setString(5, dts.getTelefone());
+            pst.setString(6, dts.getEmail());
+            pst.setInt(7, dts.getIdpessoa());
 
             pst2.setDouble(1, dts.getSalario());
             pst2.setString(2, dts.getAcesso());
@@ -200,7 +200,6 @@ public class Funcionario {
         }
     }
     
-    
     public DefaultTableModel login(String login,String senha) {
         DefaultTableModel modelo;
 
@@ -211,8 +210,8 @@ public class Funcionario {
         totalregistros = 0;
         modelo = new DefaultTableModel(null, titulos);
 
-        sSQL = "select p.idpessoa,t.acceso,t.login,t.senha,"
-                + "t.estado from pessoa p inner join Funcionario t "
+        sSQL = "select p.idpessoa,t.acesso,t.login,t.senha,"
+                + "t.estado from pessoa p inner join funcionario t "
                 + "on p.idpessoa=t.idpessoa where t.login='"
                 + login + "' and t.senha='" + senha + "' and t.estado='A'";
 

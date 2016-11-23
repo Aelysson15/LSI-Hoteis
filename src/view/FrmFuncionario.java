@@ -601,7 +601,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
         dts.setEstado((String)cboestado.getItemAt(seleccionado));
         
         if (action.equals("guardar")) {
-            if (func.insertar(dts)) {
+            if (func.inserir(dts)) {
                 JOptionPane.showMessageDialog(rootPane, "el trabajador fue registrado satisfactoriamente");
                 mostrar("");
                 inabilitar();
