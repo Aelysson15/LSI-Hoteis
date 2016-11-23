@@ -11,9 +11,9 @@ import javax.swing.JOptionPane;
  */
 public class Conexao {
     public String db="basereserva";
-    public String url = "jdbc:postgresql://localhost:5432/basereserva";
-    public String user="postgres";
-    public String pass="123";
+    public String url = "jdbc:mysql://127.0.0.1/" +db;
+    public String user="root";
+    public String pass="";
 
     public Conexao() {
     }
@@ -21,7 +21,7 @@ public class Conexao {
     public Connection conectar(){
         Connection link=null;     
         try {
-            Class.forName("org.postgresql.Driver");
+            Class.forName("org.gjt.mm.mysql.Driver");
             link=DriverManager.getConnection(this.url, this.user, this.pass);
             
         } catch (ClassNotFoundException | SQLException e) {
@@ -29,5 +29,4 @@ public class Conexao {
         }
         return link;
     }
-    
 }
