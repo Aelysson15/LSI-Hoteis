@@ -20,7 +20,6 @@ public class MPessoa {
     public MPessoa(int idpessoa, String nome, String tipo_documento, String num_documento, String endereco, String telefone, String email) {
         this.idpessoa = idpessoa;
         this.nome = nome;
-
         this.tipo_documento = tipo_documento;
         this.num_documento = num_documento;
         this.endereco = endereco;
@@ -83,9 +82,6 @@ public class MPessoa {
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    
-    
-    
+  
     
 }

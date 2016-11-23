@@ -80,7 +80,6 @@ public class Funcionario {
             PreparedStatement pst2 = cn.prepareStatement(sSQL2);
 
             pst.setString(1, dts.getNome());
-
             pst.setString(2, dts.getTipo_documento());
             pst.setString(3, dts.getNum_documento());
             pst.setString(4, dts.getEndereco());
@@ -210,7 +209,7 @@ public class Funcionario {
         totalregistros = 0;
         modelo = new DefaultTableModel(null, titulos);
 
-        sSQL = "select p.idpessoa,t.acesso,t.login,t.senha,"
+        sSQL = "select p.idpessoa,p.nome,t.acesso,t.login,t.senha,"
                 + "t.estado from pessoa p inner join funcionario t "
                 + "on p.idpessoa=t.idpessoa where t.login='"
                 + login + "' and t.senha='" + senha + "' and t.estado='A'";
