@@ -1,2 +1,2 @@
-nbproject/*
-build/*
+/nbproject/private/
+/build/
