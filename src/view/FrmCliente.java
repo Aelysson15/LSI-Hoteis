@@ -3,7 +3,6 @@ package view;
 
 import model.MCliente;
 import controle.Cliente;
-import controle.Servico;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
