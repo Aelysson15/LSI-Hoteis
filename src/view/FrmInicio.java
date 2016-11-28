@@ -130,6 +130,11 @@ public class FrmInicio extends javax.swing.JFrame {
                 jMenuItem1MouseClicked(evt);
             }
         });
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         mnureservas.add(jMenuItem1);
 
         menuBar.add(mnureservas);
@@ -237,6 +242,14 @@ public class FrmInicio extends javax.swing.JFrame {
         formp.toFront();
         formp.setVisible(true);
     }//GEN-LAST:event_jMenuItem1MouseClicked
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        FrmPagamento  formp = new FrmPagamento();
+        escritorio.add(formp);
+        formp.toFront();
+        formp.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
