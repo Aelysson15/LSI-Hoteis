@@ -14,9 +14,9 @@ public class MReserva {
     private int idcliente;
     private int idfuncionario;
     private String tipo_reserva;
-    private Date data_reserva;
+    /*private Date data_reserva;
     private Date data_entrada;
-    private Date data_saida;
+    private Date data_saida;*/
     private Double custo_alojamento;
     private String estado;
 
@@ -31,9 +31,9 @@ public class MReserva {
         this.idcliente = idcliente;
         this.idfuncionario = idfuncionario;
         this.tipo_reserva = tipo_reserva;
-        this.data_reserva = data_reserva;
+        /*this.data_reserva = data_reserva;
         this.data_entrada = data_entrada;
-        this.data_saida = data_saida;
+        this.data_saida = data_saida;*/
         this.custo_alojamento = custo_alojamento;
         this.estado = estado;
     }
@@ -78,7 +78,7 @@ public class MReserva {
         this.tipo_reserva = tipo_reserva;
     }
 
-    public Date getData_reserva() {
+    /*public Date getData_reserva() {
         return data_reserva;
     }
 
@@ -100,7 +100,7 @@ public class MReserva {
 
     public void setData_saida(Date data_saida) {
         this.data_saida = data_saida;
-    }
+    }*/
 
     public Double getCusto_alojamento() {
         return custo_alojamento;
