@@ -36,7 +36,7 @@ public class Reserva {
        
        sSQL="select r.idreserva,r.idquarto,h.numero,r.idcliente,"+
                "(select nome from pessoa where idpessoa=r.idcliente)as clienten,"+
-               "r.idfuncionario,(select nome from pessoa where idpessoa=r.idfuncionario)as funcionarion,"+
+               "r.idfuncionario,(select nome from pessoa where idpessoa=r.idfuncionario)as funcionario,"+
                "r.tipo_reserva"+
                "r.custo_alojamento,r.estado from reserva r inner join quarto h on r.idquarto=h.idquarto where r.idquarto '%"+ buscar + "%' order by idreserva desc";
        
@@ -51,13 +51,13 @@ public class Reserva {
                registro [3]=rs.getString("idcliente");
                registro [4]=rs.getString("clienten") ;
                registro [5]=rs.getString("idfuncionario");
-               registro [6]=rs.getString("funcionarion") ;
+               registro [6]=rs.getString("funcionario") ;
                registro [7]=rs.getString("tipo_reserva");
                /*registro [8]=rs.getString("data_reserva");
                registro [9]=rs.getString("data_entrada");
                registro [10]=rs.getString("data_saida");*/
-               registro [11]=rs.getString("custo_alojamento");
-               registro [12]=rs.getString("estado");
+               registro [8]=rs.getString("custo_alojamento");
+               registro [9]=rs.getString("estado");
                
                totalregistros=totalregistros+1;
                modelo.addRow(registro);
@@ -86,8 +86,8 @@ public class Reserva {
            /*pst.setDate(5, dts.getData_reserva());
            pst.setDate(6, dts.getData_entrada());
            pst.setDate(7, dts.getData_saida());*/
-           pst.setDouble(8, dts.getCusto_alojamento());
-           pst.setString(9, dts.getEstado());
+           pst.setDouble(5, dts.getCusto_alojamento());
+           pst.setString(6, dts.getEstado());
            
            int n=pst.executeUpdate();
            
@@ -118,9 +118,9 @@ public class Reserva {
            /*pst.setDate(5, dts.getData_reserva());
            pst.setDate(6, dts.getData_entrada());
            pst.setDate(7, dts.getData_saida());*/
-           pst.setDouble(8, dts.getCusto_alojamento());
-           pst.setString(9, dts.getEstado());           
-           pst.setInt(10, dts.getIdreserva());
+           pst.setDouble(5, dts.getCusto_alojamento());
+           pst.setString(6, dts.getEstado());           
+           pst.setInt(7, dts.getIdreserva());
            
            int n=pst.executeUpdate();
            
