@@ -18,7 +18,8 @@ public class MPagamento {
     public MPagamento() {
     }
 
-    public MPagamento(int idpagamento, int idreserva, String tipo_comprovante, String num_comprovante, Double total_pagamento) {
+    public MPagamento(int idpagamento, int idreserva, String tipo_comprovante, 
+            String num_comprovante, Double total_pagamento) {
         this.idpagamento = idpagamento;
         this.idreserva = idreserva;
         this.tipo_comprovante = tipo_comprovante;

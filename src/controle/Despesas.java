@@ -35,7 +35,7 @@ public class Despesas {
        totaldespesa=0.0;
        modelo = new DefaultTableModel(null,titulos);
        
-       sSQL="select c.idservico,c.idreserva,c.idproducto,p.nome,c.quantidade,c.preco_venda "
+       sSQL="select c.idservico,c.idreserva,p.nome,c.quantidade,c.preco_venda "
                + ",c.estado from despesa c inner join servico p on c.idservico=p.idservico"
                + " where c.idreserva ="+ buscar + " order by c.iddespesa desc";
        

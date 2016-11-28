@@ -102,7 +102,7 @@ public static String cliente;
             tabelaListas.setModel(modelo);
             ocultar_columnas();
             lbltotalregistros.setText("Total Registros " + Integer.toString(func.totalregistros));
-            lblconsumo.setText("Consumo Total $. " + func.totaldespesa);
+            lblconsumo.setText("Despesa Total $. " + func.totaldespesa);
         } catch (Exception e) {
             JOptionPane.showConfirmDialog(rootPane, e);
         }
@@ -458,18 +458,18 @@ public static String cliente;
     private void btnsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalvarActionPerformed
         // TODO add your handling code here:
         if (txtidservico.getText().length() == 0) {
-            JOptionPane.showConfirmDialog(rootPane, "Selecione um produto");
+            JOptionPane.showConfirmDialog(rootPane, "Selecione um servico");
             btnbuscarservico.requestFocus();
             return;
         }
         if (txtquantidade.getText().length() == 0) {
-            JOptionPane.showConfirmDialog(rootPane, "Quantidade do produto");
+            JOptionPane.showConfirmDialog(rootPane, "Quantidade do servico");
             txtquantidade.requestFocus();
             return;
         }
 
         if (txtpreco.getText().length() == 0) {
-            JOptionPane.showConfirmDialog(rootPane, "Preço do produto");
+            JOptionPane.showConfirmDialog(rootPane, "Preço do servico");
             txtpreco.requestFocus();
             return;
         }
@@ -487,7 +487,8 @@ public static String cliente;
 
         if (action.equals("salvar")) {
             if (func.insertar(dts)) {
-                JOptionPane.showMessageDialog(rootPane, "O consumo " + txtservico.getText() + " do cliente "
+                JOptionPane.showMessageDialog(rootPane, "A despesa " 
+                        + txtservico.getText() + " do cliente "
                         + txtcliente.getText() + " foi registrado.");
                 mostrar(idreserva);
                 anular();
@@ -499,7 +500,7 @@ public static String cliente;
             dts.setIddespesa(Integer.parseInt(txtiddespesa.getText()));
 
             if (func.editar(dts)) {
-                JOptionPane.showMessageDialog(rootPane, "O consumo do cliente "
+                JOptionPane.showMessageDialog(rootPane, "A despesa do cliente "
                         + txtcliente.getText() + "foi alterado ");
                 mostrar(idreserva);
                 anular();
@@ -536,7 +537,8 @@ public static String cliente;
     private void btnexcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnexcluirActionPerformed
         // TODO add your handling code here:
         if (!txtiddespesa.getText().equals("")) {
-            int confirmacion = JOptionPane.showConfirmDialog(rootPane, "Deseja apagar o produto?","Confirmar",2);
+            int confirmacion = JOptionPane.showConfirmDialog(rootPane, "Deseja "
+                    + "apagar o servico?","Confirmar",2);
 
             if (confirmacion==0) {
                 Despesas func = new Despesas ();
