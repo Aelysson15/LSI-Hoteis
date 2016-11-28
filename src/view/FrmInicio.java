@@ -125,6 +125,11 @@ public class FrmInicio extends javax.swing.JFrame {
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/pagamentos.png"))); // NOI18N
         jMenuItem1.setText("Pagamentos");
+        jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem1MouseClicked(evt);
+            }
+        });
         mnureservas.add(jMenuItem1);
 
         menuBar.add(mnureservas);
@@ -224,6 +229,14 @@ public class FrmInicio extends javax.swing.JFrame {
         FrmReserva.txtidfuncionario.setText(lblidpessoa.getText());
         FrmReserva.idcliente=Integer.parseInt(lblidpessoa.getText());
     }//GEN-LAST:event_contentMenuItemActionPerformed
+
+    private void jMenuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MouseClicked
+        // TODO add your handling code here:
+        FrmPagamento  formp = new FrmPagamento();
+        escritorio.add(formp);
+        formp.toFront();
+        formp.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1MouseClicked
 
     /**
      * @param args the command line arguments
