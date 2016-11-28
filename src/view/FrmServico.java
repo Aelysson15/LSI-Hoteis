@@ -421,7 +421,8 @@ public class FrmServico extends javax.swing.JInternalFrame {
     private void btnexcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnexcluirActionPerformed
         // TODO add your handling code here:
         if (!txtidservico.getText().equals("")) {
-            int confirmacion = JOptionPane.showConfirmDialog(rootPane, "Deseja excluir o serviço?","Confirmar",2);
+            int confirmacion = JOptionPane.showConfirmDialog(rootPane, "Deseja "
+                    + "excluir o serviço?","Confirmar",2);
 
             if (confirmacion==0) {
                 Servico func = new Servico ();

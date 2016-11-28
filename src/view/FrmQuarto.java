@@ -537,7 +537,8 @@ public class FrmQuarto extends javax.swing.JInternalFrame {
     private void btnexcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnexcluirActionPerformed
         // TODO add your handling code here:
         if (!txtidquarto.getText().equals("")) {
-            int confirmacion = JOptionPane.showConfirmDialog(rootPane, "Deseja excluir o quarto?","Confirmar",2);
+            int confirmacion = JOptionPane.showConfirmDialog(rootPane, "Deseja "
+                    + "excluir o quarto?","Confirmar",2);
             
             if (confirmacion==0) {
                 Quarto func = new Quarto ();
@@ -604,9 +605,6 @@ public class FrmQuarto extends javax.swing.JInternalFrame {
         cboestado.setSelectedItem(tabelaList.getValueAt(fila, 6).toString());
         cbotipo_quarto.setSelectedItem(tabelaList.getValueAt(fila, 7).toString());
         
-       
-       
-       
         
     }//GEN-LAST:event_tabelaListMouseClicked
 
@@ -616,7 +614,7 @@ public class FrmQuarto extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_btnsairActionPerformed
     
-   private Connection connection=new Conexao().conectar();
+   private Connection connection = new Conexao().conectar();
     
     private void btnRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRelatorioActionPerformed
         Map p=new HashMap();

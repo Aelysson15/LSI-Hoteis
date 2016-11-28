@@ -130,7 +130,7 @@
                                               </Group>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="txtemail" min="-2" pref="184" max="-2" attributes="0"/>
-                                                  <Component id="txtsaldo" min="-2" pref="184" max="-2" attributes="0"/>
+                                                  <Component id="txtsalario" min="-2" pref="184" max="-2" attributes="0"/>
                                                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                                       <Component id="txtsenha" alignment="0" max="32767" attributes="0"/>
                                                       <Component id="txtlogin" alignment="0" max="32767" attributes="0"/>
@@ -199,7 +199,7 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtsaldo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtsalario" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -356,9 +356,9 @@
             <Property name="text" type="java.lang.String" value="Email:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtsaldo">
+        <Component class="javax.swing.JTextField" name="txtsalario">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtsaldoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtsalarioActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel12">

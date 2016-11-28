@@ -173,7 +173,8 @@ public class FrmUsuarioLogin extends javax.swing.JFrame {
             }
             
             else {
-                JOptionPane.showMessageDialog(rootPane, "Acesso Negado","Acesso ao Sistema",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane, "Acesso Negado",
+                        "Acesso ao Sistema",JOptionPane.ERROR_MESSAGE);
             }
             
             

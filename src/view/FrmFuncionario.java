@@ -41,7 +41,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
         txtendereco.setEnabled(false);
         txttelefone.setEnabled(false);
         txtemail.setEnabled(false);
-        txtsaldo.setEnabled(false);
+        txtsalario.setEnabled(false);
         cboacesso.setEnabled(false);
         txtlogin.setEnabled(false);
         txtsenha.setEnabled(false);
@@ -57,7 +57,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
         txtendereco.setText("");
         txttelefone.setText("");
         txtemail.setText("");
-        txtsaldo.setText("");
+        txtsalario.setText("");
         txtlogin.setText("");
         txtsenha.setText("");
     }
@@ -72,7 +72,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
         txtendereco.setEnabled(true);
         txttelefone.setEnabled(true);
         txtemail.setEnabled(true);
-        txtsaldo.setEnabled(true);
+        txtsalario.setEnabled(true);
         cboacesso.setEnabled(true);
         txtlogin.setEnabled(true);
         txtsenha.setEnabled(true);
@@ -88,7 +88,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
         txtendereco.setText("");
         txttelefone.setText("");
         txtemail.setText("");
-        txtsaldo.setText("");
+        txtsalario.setText("");
         txtlogin.setText("");
         txtsenha.setText("");
         
@@ -137,7 +137,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
         txttelefone = new javax.swing.JTextField();
         txtemail = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        txtsaldo = new javax.swing.JTextField();
+        txtsalario = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         cboacesso = new javax.swing.JComboBox();
         jLabel5 = new javax.swing.JLabel();
@@ -242,9 +242,9 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
 
         jLabel11.setText("Email:");
 
-        txtsaldo.addActionListener(new java.awt.event.ActionListener() {
+        txtsalario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtsaldoActionPerformed(evt);
+                txtsalarioActionPerformed(evt);
             }
         });
 
@@ -323,7 +323,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(txtemail, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(txtsaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtsalario, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                                     .addComponent(txtsenha, javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(txtlogin, javax.swing.GroupLayout.Alignment.LEADING)
@@ -372,7 +372,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(txtsaldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtsalario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cboacesso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -543,42 +543,40 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
     private void btnnovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnovoActionPerformed
         // TODO add your handling code here:
         habilitar();
-        btnsalvar.setText("Guardar");
-        action = "guardar";
+        btnsalvar.setText("Salvar");
+        action = "salvar";
     }//GEN-LAST:event_btnnovoActionPerformed
 
     private void btnsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalvarActionPerformed
         // TODO add your handling code here:
         if (txtnome.getText().length() == 0) {
-            JOptionPane.showConfirmDialog(rootPane, "Debes ingresar un Nombre para el Trabajador");
+            JOptionPane.showConfirmDialog(rootPane, "Insira um nome para o Funcionario");
             txtnome.requestFocus();
             return;
         }
 
         if (txtnum_documento.getText().length() == 0) {
-            JOptionPane.showConfirmDialog(rootPane, "Debes ingresar un Número de Doc para el Trabajador");
+            JOptionPane.showConfirmDialog(rootPane, "Insira o numero do documento para o Funcionario");
             txtnum_documento.requestFocus();
             return;
         }
         
-        if (txtsaldo.getText().length() == 0) {
-            JOptionPane.showConfirmDialog(rootPane, "Debes ingresar un Sueldo para el trabajador");
-            txtsaldo.requestFocus();
+        if (txtsalario.getText().length() == 0) {
+            JOptionPane.showConfirmDialog(rootPane, "Insira o salario do Funcionario");
+            txtsalario.requestFocus();
             return;
         }
         if (txtlogin.getText().length() == 0) {
-            JOptionPane.showConfirmDialog(rootPane, "Debes ingresar un login para el trabajador");
+            JOptionPane.showConfirmDialog(rootPane, "Iisira o login do Funcionario");
             txtlogin.requestFocus();
             return;
         }
         if (txtsenha.getText().length() == 0) {
-            JOptionPane.showConfirmDialog(rootPane, "Debes ingresar un password para el trabajador");
+            JOptionPane.showConfirmDialog(rootPane, "insira a senha para o funcionario");
             txtsenha.requestFocus();
             return;
         }
         
-        
-
         MFuncionario dts = new MFuncionario();
         Funcionario func = new Funcionario();
 
@@ -591,7 +589,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
         dts.setTelefone(txttelefone.getText());
         dts.setEmail(txtemail.getText());
         
-        dts.setSalario(Double.parseDouble(txtsaldo.getText()));
+        dts.setSalario(Double.parseDouble(txtsalario.getText()));
         seleccionado=cboacesso.getSelectedIndex();
         dts.setAcesso((String)cboacesso.getItemAt(seleccionado));
         dts.setLogin(txtlogin.getText());
@@ -602,7 +600,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
         
         if (action.equals("guardar")) {
             if (func.inserir(dts)) {
-                JOptionPane.showMessageDialog(rootPane, "el trabajador fue registrado satisfactoriamente");
+                JOptionPane.showMessageDialog(rootPane, "registrado com sucesso!");
                 mostrar("");
                 inabilitar();
 
@@ -634,7 +632,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
         txttelefone.setText(tablalistado.getValueAt(fila, 7).toString());
         txtemail.setText(tablalistado.getValueAt(fila, 8).toString());
         
-        txtsaldo.setText(tablalistado.getValueAt(fila, 9).toString());
+        txtsalario.setText(tablalistado.getValueAt(fila, 9).toString());
         cboacesso.setSelectedItem(tablalistado.getValueAt(fila, 10).toString());
         txtlogin.setText(tablalistado.getValueAt(fila, 11).toString());
         txtsenha.setText(tablalistado.getValueAt(fila, 12).toString());
@@ -666,10 +664,10 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
         txtemail.transferFocus();
     }//GEN-LAST:event_txtemailActionPerformed
 
-    private void txtsaldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsaldoActionPerformed
+    private void txtsalarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsalarioActionPerformed
         // TODO add your handling code here:
-        txtsaldo.transferFocus();
-    }//GEN-LAST:event_txtsaldoActionPerformed
+        txtsalario.transferFocus();
+    }//GEN-LAST:event_txtsalarioActionPerformed
 
     private void txtloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtloginActionPerformed
         // TODO add your handling code here:
@@ -678,7 +676,8 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
     private void btnexcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnexcluirActionPerformed
 
         if (!txtidpessoa.getText().equals("")) {
-            int confirmacao = JOptionPane.showConfirmDialog(rootPane, "Tem certeza que quer deletar o Funcionario?","Confirmar",2);
+            int confirmacao = JOptionPane.showConfirmDialog(rootPane, "Tem certeza"
+                    + " que quer deletar o Funcionario?","Confirmar",2);
 
             if (confirmacao==0) {
                 Funcionario func = new Funcionario();
@@ -765,7 +764,7 @@ public class FrmFuncionario extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtlogin;
     private javax.swing.JTextField txtnome;
     private javax.swing.JTextField txtnum_documento;
-    private javax.swing.JTextField txtsaldo;
+    private javax.swing.JTextField txtsalario;
     private javax.swing.JTextField txtsenha;
     private javax.swing.JTextField txttelefone;
     // End of variables declaration//GEN-END:variables

@@ -8,7 +8,6 @@ import controle.Conexao;
 import controle.Despesas;
 import controle.Quarto;
 import controle.Pagamento;
-import controle.Servico;
 import controle.Reserva;
 import java.io.File;
 import java.sql.Connection;
@@ -148,7 +147,7 @@ public class FrmPagamento extends javax.swing.JInternalFrame {
             tabelaDosConsumos.setModel(modelo);
             ocultar_colunasConsumos();
             
-            lbltotalregistrosconsumo.setText("Total Consumos " + func2.totalregistros);
+            lbltotalregistrosconsumo.setText("Total Despesas " + func2.totalregistros);
             lbltotalconsumo.setText("Consumo Total: $." + func2.totaldespesa );
             
 
@@ -676,7 +675,8 @@ public class FrmPagamento extends javax.swing.JInternalFrame {
     private void btnexcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnexcluirActionPerformed
         // TODO add your handling code here:
         if (!txtidpagamento.getText().equals("")) {
-            int confirmacion = JOptionPane.showConfirmDialog(rootPane, "Excluir o pagamento?","Confirmar",2);
+            int confirmacion = JOptionPane.showConfirmDialog(rootPane, "Excluir "
+                    + "o pagamento?","Confirmar",2);
 
             if (confirmacion==0) {
                 Pagamento func = new Pagamento ();
@@ -722,7 +722,7 @@ public class FrmPagamento extends javax.swing.JInternalFrame {
 
             try {
                 report = JasperCompileManager.compileReport(new File("").getAbsolutePath()
-                        + "/src/Reportes/rptComprovante.jrxml");
+                        + "/src/Relatorios/rptComprovante.jrxml");
                 print = JasperFillManager.fillReport(report, p, connection);
                 JasperViewer view = new JasperViewer(print, false);
                 view.setTitle("Comprovante");
@@ -743,7 +743,7 @@ public class FrmPagamento extends javax.swing.JInternalFrame {
 
             try {
                 report = JasperCompileManager.compileReport(new File("").getAbsolutePath()
-                        + "/src/Reportes/rptComprovanteDespesa.jrxml");
+                        + "/src/Relatorios/rptComprovanteDespesa.jrxml");
                 print = JasperFillManager.fillReport(report, p, connection);
                 JasperViewer view = new JasperViewer(print, false);
                 view.setTitle("Comprovante Despesa");
