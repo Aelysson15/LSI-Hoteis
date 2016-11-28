@@ -541,13 +541,12 @@ public class FrmCliente extends javax.swing.JInternalFrame {
 
         txtidpessoa.setText(tabelaClientes.getValueAt(fila, 0).toString());
         txtnome.setText(tabelaClientes.getValueAt(fila, 1).toString());
-
-        cbotipo_documento.setSelectedItem(tabelaClientes.getValueAt(fila, 4).toString());
-        txtnum_documento.setText(tabelaClientes.getValueAt(fila, 5).toString());
-        txtendereco.setText(tabelaClientes.getValueAt(fila, 6).toString());
-        txttelefone.setText(tabelaClientes.getValueAt(fila, 7).toString());
-        txtemail.setText(tabelaClientes.getValueAt(fila, 8).toString());
-        txtcodigo_cliente.setText(tabelaClientes.getValueAt(fila, 9).toString());
+        cbotipo_documento.setSelectedItem(tabelaClientes.getValueAt(fila, 2).toString());
+        txtnum_documento.setText(tabelaClientes.getValueAt(fila, 3).toString());
+        txtendereco.setText(tabelaClientes.getValueAt(fila, 4).toString());
+        txttelefone.setText(tabelaClientes.getValueAt(fila, 5).toString());
+        txtemail.setText(tabelaClientes.getValueAt(fila, 6).toString());
+        txtcodigo_cliente.setText(tabelaClientes.getValueAt(fila, 7).toString());
 
     }//GEN-LAST:event_tabelaClientesMouseClicked
 
