@@ -200,7 +200,7 @@ public class FrmReserva extends javax.swing.JInternalFrame {
 
         jLabel7.setText("Tipo Reserva:");
 
-        cbotipo_reserva.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Reserva", "Alquiler" }));
+        cbotipo_reserva.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Reserva", "Aluguel" }));
         cbotipo_reserva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbotipo_reservaActionPerformed(evt);
@@ -277,7 +277,7 @@ public class FrmReserva extends javax.swing.JInternalFrame {
 
         jLabel11.setText("Estado Reserva:");
 
-        cboestado.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Alquiler", "Pagada", "Anulada" }));
+        cboestado.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Aluguel", "Paga", "Cancelada" }));
         cboestado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cboestadoActionPerformed(evt);
@@ -532,8 +532,6 @@ public class FrmReserva extends javax.swing.JInternalFrame {
                     .addComponent(btnrealizarpagoamentos)))
         );
 
-        btnverconsumo.getAccessibleContext().setAccessibleName("Despesas");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -616,23 +614,23 @@ public class FrmReserva extends javax.swing.JInternalFrame {
         
         Calendar cal;
         int d,m,a;
-//        cal=dcdata_reserva.getCalendar();
-//        d=cal.get(Calendar.DAY_OF_MONTH);
-//        m=cal.get(Calendar.MONTH);
-//        a=cal.get(Calendar.YEAR) - 1900;
-//        dts.setData_reserva(new Date(a,m,d));
-//        
-//        cal=dcdata_ingresa.getCalendar();
-//        d=cal.get(Calendar.DAY_OF_MONTH);
-//        m=cal.get(Calendar.MONTH);
-//        a=cal.get(Calendar.YEAR) - 1900;
-//        dts.setData_entrada(new Date(a,m,d));
-//        
-//        cal=dcdata_saida.getCalendar();
-//        d=cal.get(Calendar.DAY_OF_MONTH);
-//        m=cal.get(Calendar.MONTH);
-//        a=cal.get(Calendar.YEAR) - 1900;
-//        dts.setData_saida(new Date(a,m,d));
+/*      cal=dcdata_reserva.getCalendar();
+        d=cal.get(Calendar.DAY_OF_MONTH);
+        m=cal.get(Calendar.MONTH);
+        a=cal.get(Calendar.YEAR) - 1900;
+        dts.setData_reserva(new Date(a,m,d));
+
+        cal=dcdata_ingresa.getCalendar();
+        d=cal.get(Calendar.DAY_OF_MONTH);
+        m=cal.get(Calendar.MONTH);
+        a=cal.get(Calendar.YEAR) - 1900;
+        dts.setData_entrada(new Date(a,m,d));
+
+        cal=dcdata_saida.getCalendar();
+        d=cal.get(Calendar.DAY_OF_MONTH);
+        m=cal.get(Calendar.MONTH);
+        a=cal.get(Calendar.YEAR) - 1900;
+        dts.setData_saida(new Date(a,m,d));*/
         
         dts.setCusto_alojamento(Double.parseDouble(txtcusto_alojamento.getText()));
         seleccionado = cboestado.getSelectedIndex();

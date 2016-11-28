@@ -262,7 +262,7 @@
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="2">
                 <StringItem index="0" value="Reserva"/>
-                <StringItem index="1" value="Alquiler"/>
+                <StringItem index="1" value="Aluguel"/>
               </StringArray>
             </Property>
           </Properties>
@@ -388,12 +388,8 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="cboestado">
           <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="Alquiler"/>
-                <StringItem index="1" value="Pagada"/>
-                <StringItem index="2" value="Anulada"/>
-              </StringArray>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new javax.swing.DefaultComboBoxModel(new String[] { &quot;Aluguel&quot;, &quot;Paga&quot;, &quot;Cancelada&quot; })" type="code"/>
             </Property>
           </Properties>
           <Events>
@@ -578,9 +574,6 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Despesas"/>
           </Properties>
-          <AccessibilityProperties>
-            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Despesas"/>
-          </AccessibilityProperties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnverconsumoActionPerformed"/>
           </Events>

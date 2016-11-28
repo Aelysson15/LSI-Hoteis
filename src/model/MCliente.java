@@ -23,6 +23,5 @@ public class MCliente extends MPessoa{
         this.codigo_cliente = codigo_cliente;
     }
 
-
     
 }

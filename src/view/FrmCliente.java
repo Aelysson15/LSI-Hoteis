@@ -166,7 +166,7 @@ public class FrmCliente extends javax.swing.JInternalFrame {
 
         jLabel7.setText("Tipo Doc:");
 
-        cbotipo_documento.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "CPF", "RG", "CNH" }));
+        cbotipo_documento.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "CPF", "RG" }));
         cbotipo_documento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbotipo_documentoActionPerformed(evt);

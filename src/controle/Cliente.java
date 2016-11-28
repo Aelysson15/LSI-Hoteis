@@ -75,11 +75,11 @@ public class Cliente {
             PreparedStatement pst2 = cn.prepareStatement(sSQL2);
 
             pst.setString(1, dts.getNome());
-            pst.setString(4, dts.getTipo_documento());
-            pst.setString(5, dts.getNum_documento());
-            pst.setString(6, dts.getEndereco());
-            pst.setString(7, dts.getTelefone());
-            pst.setString(8, dts.getEmail());
+            pst.setString(2, dts.getTipo_documento());
+            pst.setString(3, dts.getNum_documento());
+            pst.setString(4, dts.getEndereco());
+            pst.setString(5, dts.getTelefone());
+            pst.setString(6, dts.getEmail());
 
             pst2.setString(1, dts.getCodigo_cliente());
 
@@ -117,12 +117,12 @@ public class Cliente {
             PreparedStatement pst2 = cn.prepareStatement(sSQL2);
 
             pst.setString(1, dts.getNome());
-            pst.setString(4, dts.getTipo_documento());
-            pst.setString(5, dts.getNum_documento());
-            pst.setString(6, dts.getEndereco());
-            pst.setString(7, dts.getTelefone());
-            pst.setString(8, dts.getEmail());
-            pst.setInt(9, dts.getIdpessoa());
+            pst.setString(2, dts.getTipo_documento());
+            pst.setString(3, dts.getNum_documento());
+            pst.setString(4, dts.getEndereco());
+            pst.setString(5, dts.getTelefone());
+            pst.setString(6, dts.getEmail());
+            pst.setInt(7, dts.getIdpessoa());
 
             pst2.setString(1, dts.getCodigo_cliente());
             pst2.setInt(2, dts.getIdpessoa());

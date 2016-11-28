@@ -36,9 +36,8 @@ public class Reserva {
        sSQL="select r.idreserva,r.idquarto,h.numero,r.idcliente,"+
                "(select nome from pessoa where idpessoa=r.idcliente)as clienten,"+
                "r.idfuncionario,(select nome from pessoa where idpessoa=r.idfuncionario)as funcionarion,"+
-               "r.tipo_reserva,r.data_reserva,r.fec"
-               + "data_entrada,r.data_saida,"+
-               "r.custo_alojamiento,r.estado from reserva r inner join quarto h on r.idquarto=h.idquarto where r.data_reserva like '%"+ buscar + "%' order by idreserva desc";
+               "r.tipo_reserva,r.data_reserva,r.data_entrada,r.data_saida,"+
+               "r.custo_alojamento,r.estado from reserva r inner join quarto h on r.idquarto=h.idquarto where r.data_reserva like '%"+ buscar + "%' order by idreserva desc";
        
        try {
            Statement st= cn.createStatement();
@@ -50,13 +49,13 @@ public class Reserva {
                registro [2]=rs.getString("numero");
                registro [3]=rs.getString("idcliente");
                registro [4]=rs.getString("clienten") ;
-               registro [5]=rs.getString("funcionario");
+               registro [5]=rs.getString("idfuncionario");
                registro [6]=rs.getString("funcionarion") ;
                registro [7]=rs.getString("tipo_reserva");
                registro [8]=rs.getString("data_reserva");
                registro [9]=rs.getString("data_entrada");
                registro [10]=rs.getString("data_saida");
-               registro [11]=rs.getString("custo_alojamiento");
+               registro [11]=rs.getString("custo_alojamento");
                registro [12]=rs.getString("estado");
                
                totalregistros=totalregistros+1;
@@ -74,7 +73,7 @@ public class Reserva {
    
    public boolean insertar (MReserva dts){
        sSQL="insert into reserva (idquarto,idcliente,idfuncionario,tipo_reserva,"
-               + "data_reserva,data_entrada,data_saida,custo_alojamiento,estado)" +
+               + "data_reserva,data_entrada,data_saida,custo_alojamento,estado)" +
                "values (?,?,?,?,?,?,?,?,?)";
        try {
            
@@ -105,7 +104,8 @@ public class Reserva {
    }
 
    public boolean editar (MReserva dts){
-       sSQL="update reserva set idquarto=?,idcliente=?,idfuncionario=?,tipo_reserva=?,data_reserva=?,data_entrada=?,data_saida=?,custo_alojamiento=?,estado=?"+
+       sSQL="update reserva set idquarto=?,idcliente=?,idfuncionario=?,"
+               + "tipo_reserva=?,data_reserva=?,data_entrada=?,data_saida=?,custo_alojamento=?,estado=?"+
                " where idreserva=?";
            
        try {
