@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 public class FrmReserva extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form frmreserva
+     * Creates new form FrmReserva
      */
     public FrmReserva() {
         initComponents();

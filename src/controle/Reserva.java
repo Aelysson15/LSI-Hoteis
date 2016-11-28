@@ -35,13 +35,12 @@ public class Reserva {
        totalregistros=0;
        modelo = new DefaultTableModel(null,titulos);
        
-       sSQL="select r.idreserva,r.idquarto,h.numero,r.idcliente,"+
+       sSQL="select r.idreserva,r.idquarto,q.numero,r.idcliente,"+
                "(select nome from pessoa where idpessoa=r.idcliente)as clienten,"+
                "r.idfuncionario,(select nome from pessoa where idpessoa=r.idfuncionario)"
                + "as funcionario,"+
-               "r.tipo_reserva"+
-               "r.custo_alojamento,r.estado from reserva r inner join quarto q "
-               + "on r.idquarto=q.idquarto where r.idquarto '%"+ buscar + "%' order by idreserva desc";
+               "r.tipo_reserva,r.custo_alojamento,r.estado from reserva r inner join quarto q "
+               + "on r.idquarto=q.idquarto where r.idquarto like '%"+ buscar + "%' order by idreserva desc";
        
        try {
            Statement st= cn.createStatement();
