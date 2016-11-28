@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
 public class FrmCliente extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form frmcliente
+     * Creates new form FrmCliente
      */
     public FrmCliente() {
         initComponents();
@@ -31,10 +31,7 @@ public class FrmCliente extends javax.swing.JInternalFrame {
 
     void anular() {
         txtidpessoa.setVisible(false);
-        
         txtnome.setEnabled(false);
-        //txtapaterno.setEnabled(false);
-        //txtamaterno.setEnabled(false);
         cbotipo_documento.setEnabled(false);
         txtnum_documento.setEnabled(false);
         txtendereco.setEnabled(false);
@@ -45,10 +42,9 @@ public class FrmCliente extends javax.swing.JInternalFrame {
         btnsalvar.setEnabled(false);
         btncancelar.setEnabled(false);
         btnapagar.setEnabled(false);
+
         txtidpessoa.setText("");
         txtnome.setText("");
-        //txtapaterno.setText("");
-        //txtamaterno.setText("");
         txtnum_documento.setText("");
         txtendereco.setText("");
         txttelefone.setText("");
@@ -58,10 +54,7 @@ public class FrmCliente extends javax.swing.JInternalFrame {
 
     void habilitar() {
         txtidpessoa.setVisible(false);
-        
         txtnome.setEnabled(true);
-        //txtapaterno.setEnabled(true);
-        //txtamaterno.setEnabled(true);
         cbotipo_documento.setEnabled(true);
         txtnum_documento.setEnabled(true);
         txtendereco.setEnabled(true);
@@ -72,10 +65,9 @@ public class FrmCliente extends javax.swing.JInternalFrame {
         btnsalvar.setEnabled(true);
         btncancelar.setEnabled(true);
         btnapagar.setEnabled(true);
+        
         txtidpessoa.setText("");
         txtnome.setText("");
-        //txtapaterno.setText("");
-        //txtamaterno.setText("");
         txtnum_documento.setText("");
         txtendereco.setText("");
         txttelefone.setText("");
@@ -100,7 +92,6 @@ public class FrmCliente extends javax.swing.JInternalFrame {
         }
     }
 
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -25,7 +25,8 @@ public class Cliente {
     public DefaultTableModel mostrar(String buscar) {
         DefaultTableModel modelo;
 
-        String[] titulos = {"ID", "Nome", "Doc", "Número Documento", "Endereco", "Telefone", "Email", "Código"};
+        String[] titulos = {"ID", "Nome", "Doc", "Número Documento", "Endereco", 
+            "Telefone", "Email", "Código"};
 
         String[] registro = new String[10];
 

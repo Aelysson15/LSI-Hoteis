@@ -17,13 +17,15 @@ public class MReserva {
     private Date data_reserva;
     private Date data_entrada;
     private Date data_saida;
-    private Double custo_alojamiento;
+    private Double custo_alojamento;
     private String estado;
 
     public MReserva() {
     }
 
-    public MReserva(int idreserva, int idquarto, int idcliente, int idfuncionario, String tipo_reserva, Date data_reserva, Date data_entrada, Date data_saida, Double custo_alojamiento, String estado) {
+    public MReserva(int idreserva, int idquarto, int idcliente, int idfuncionario,
+            String tipo_reserva, Date data_reserva, Date data_entrada, 
+            Date data_saida, Double custo_alojamiento, String estado) {
         this.idreserva = idreserva;
         this.idquarto = idquarto;
         this.idcliente = idcliente;
@@ -32,7 +34,7 @@ public class MReserva {
         this.data_reserva = data_reserva;
         this.data_entrada = data_entrada;
         this.data_saida = data_saida;
-        this.custo_alojamiento = custo_alojamiento;
+        this.custo_alojamento = custo_alojamento;
         this.estado = estado;
     }
 
@@ -101,11 +103,11 @@ public class MReserva {
     }
 
     public Double getCusto_alojamento() {
-        return custo_alojamiento;
+        return custo_alojamento;
     }
 
-    public void setCusto_alojamento(Double custo_alojamiento) {
-        this.custo_alojamiento = custo_alojamiento;
+    public void setCusto_alojamento(Double custo_alojamento) {
+        this.custo_alojamento = custo_alojamento;
     }
 
     public String getEstado() {
