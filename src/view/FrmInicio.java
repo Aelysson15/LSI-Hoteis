@@ -222,7 +222,7 @@ public class FrmInicio extends javax.swing.JFrame {
         form.toFront();
         form.setVisible(true);
         FrmReserva.txtidfuncionario.setText(lblidpessoa.getText());
-        FrmReserva.idusuario=Integer.parseInt(lblidpessoa.getText());
+        FrmReserva.idcliente=Integer.parseInt(lblidpessoa.getText());
     }//GEN-LAST:event_contentMenuItemActionPerformed
 
     /**
