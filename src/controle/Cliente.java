@@ -67,7 +67,7 @@ public class Cliente {
 
     public boolean insertar(MCliente dts) {
         sSQL = "insert into pessoa (nome,tipo_documento,num_documento,endereco,telefone,email)"
-                + "values (?,?,?,?,?,?,?,?)";
+                + "values (?,?,?,?,?,?)";
         sSQL2 = "insert into cliente (idpessoa,codigo_cliente)"
                 + "values ((select idpessoa from pessoa order by idpessoa desc limit 1),?)";
         try {
@@ -81,8 +81,9 @@ public class Cliente {
             pst.setString(4, dts.getEndereco());
             pst.setString(5, dts.getTelefone());
             pst.setString(6, dts.getEmail());
+            
+            pst2.setInt(1, dts.getIdpessoa());
 
-            pst2.setString(1, dts.getCodigo_cliente());
 
             int n = pst.executeUpdate();
 

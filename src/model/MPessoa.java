@@ -17,7 +17,8 @@ public class MPessoa {
     public MPessoa() {
     }
 
-    public MPessoa(int idpessoa, String nome, String tipo_documento, String num_documento, String endereco, String telefone, String email) {
+    public MPessoa(int idpessoa, String nome, String tipo_documento, 
+            String num_documento, String endereco, String telefone, String email) {
         this.idpessoa = idpessoa;
         this.nome = nome;
         this.tipo_documento = tipo_documento;
