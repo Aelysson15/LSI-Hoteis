@@ -27,7 +27,7 @@ public class FrmReserva extends javax.swing.JInternalFrame {
     }
     
     private String action = "salvar";
-    public static int idusuario;
+    public static int idcliente;
     void ocultar_columnas() {
         tabelaList.getColumnModel().getColumn(0).setMaxWidth(0);
         tabelaList.getColumnModel().getColumn(0).setMinWidth(0);
@@ -587,14 +587,14 @@ public class FrmReserva extends javax.swing.JInternalFrame {
         
         dts.setIdquarto(Integer.parseInt(txtidquarto.getText()));
         dts.setIdcliente(Integer.parseInt(txtidcliente.getText()));
-        dts.setIdfuncionario(idusuario);
+        dts.setIdfuncionario(idcliente);
         
         int seleccionado = cbotipo_reserva.getSelectedIndex();
         dts.setTipo_reserva((String) cbotipo_reserva.getItemAt(seleccionado));
         
-        Calendar cal;
+        /*Calendar cal;
         int d,m,a;
-/*      cal=dcdata_reserva.getCalendar();
+          cal=dcdata_reserva.getCalendar();
         d=cal.get(Calendar.DAY_OF_MONTH);
         m=cal.get(Calendar.MONTH);
         a=cal.get(Calendar.YEAR) - 1900;

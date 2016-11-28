@@ -24,8 +24,7 @@ public class MReserva {
     }
 
     public MReserva(int idreserva, int idquarto, int idcliente, int idfuncionario,
-            String tipo_reserva, Date data_reserva, Date data_entrada, 
-            Date data_saida, Double custo_alojamiento, String estado) {
+            String tipo_reserva, Double custo_alojamiento, String estado) {
         this.idreserva = idreserva;
         this.idquarto = idquarto;
         this.idcliente = idcliente;

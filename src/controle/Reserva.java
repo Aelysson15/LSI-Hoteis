@@ -26,7 +26,8 @@ public class Reserva {
    public DefaultTableModel mostrar(String buscar){
        DefaultTableModel modelo;
        
-       String [] titulos = {"ID","idquarto","Numero","idcliente","Cliente","idfuncionario","Funcionario","Tipo Reserva",
+       String [] titulos = {"ID","idquarto","Numero","idcliente","Cliente",
+           "idfuncionario","Funcionario","Tipo Reserva",
            /*"Data Reserva","Data Entrada","Data Saida",*/"Custo","Estado"};
        
        String [] registro =new String [13];
@@ -36,9 +37,11 @@ public class Reserva {
        
        sSQL="select r.idreserva,r.idquarto,h.numero,r.idcliente,"+
                "(select nome from pessoa where idpessoa=r.idcliente)as clienten,"+
-               "r.idfuncionario,(select nome from pessoa where idpessoa=r.idfuncionario)as funcionario,"+
+               "r.idfuncionario,(select nome from pessoa where idpessoa=r.idfuncionario)"
+               + "as funcionario,"+
                "r.tipo_reserva"+
-               "r.custo_alojamento,r.estado from reserva r inner join quarto h on r.idquarto=h.idquarto where r.idquarto '%"+ buscar + "%' order by idreserva desc";
+               "r.custo_alojamento,r.estado from reserva r inner join quarto q "
+               + "on r.idquarto=q.idquarto where r.idquarto '%"+ buscar + "%' order by idreserva desc";
        
        try {
            Statement st= cn.createStatement();
@@ -184,9 +187,5 @@ public class Reserva {
            return false;
        }
    }
-    
-    
-    
-    
-    
+
 }
