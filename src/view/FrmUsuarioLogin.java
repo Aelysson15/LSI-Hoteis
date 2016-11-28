@@ -63,6 +63,11 @@ public class FrmUsuarioLogin extends javax.swing.JFrame {
         btnsair.setForeground(new java.awt.Color(255, 255, 255));
         btnsair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/cancelar.png"))); // NOI18N
         btnsair.setText("Sair");
+        btnsair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsairActionPerformed(evt);
+            }
+        });
 
         tablalistado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -182,6 +187,11 @@ public class FrmUsuarioLogin extends javax.swing.JFrame {
         } catch (Exception e) {
         }
     }//GEN-LAST:event_btnentrarActionPerformed
+
+    private void btnsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsairActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_btnsairActionPerformed
 
     /**
      * @param args the command line arguments
